@@ -6,7 +6,7 @@ import NodeRSA from "https://esm.sh/node-rsa@1.1.1";
 import "$dotenv/load.ts";
 
 const privateKeyPEMString = Deno.env.get("KEY") as string;
-const privateKeyPEM = new NodeRSA(privateKeyPEMString);
+const privateKeyPEM = new NodeRSA(privateKeyPEMString, "pkcs1");
 const privateKeyPkcs8 = privateKeyPEM.exportKey("pkcs8-private-pem");
 
 export default function GeneratePage(props: PageProps) {
