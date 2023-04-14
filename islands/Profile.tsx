@@ -103,7 +103,7 @@ export default function Profile(props: {
   
   return <div>
     <div className="p-4 flex flex-row gap-4 mx-auto justify-center">
-      <div className="w-1/2">
+      <div className="w-1/2 border p-6 rounded shadow">
         <div className="flex flex-row gap-4">
           {
             loading ? 

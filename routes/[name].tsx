@@ -1,5 +1,6 @@
 import { PageProps } from "$fresh/server.ts";
 import Profile from "../islands/Profile.tsx";
+import Header from "../islands/Header.tsx";
 import { Head } from "$fresh/runtime.ts";
 import NodeRSA from "https://esm.sh/node-rsa@1.1.1";
 import "$dotenv/load.ts";
@@ -16,6 +17,7 @@ export default function GeneratePage(props: PageProps) {
       <Head>
         <title>Fresh App</title>
       </Head>
+      <Header />
       <Profile 
         name={name} 
         privateKeyPkcs8={privateKeyPkcs8}
