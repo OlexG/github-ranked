@@ -5,9 +5,8 @@ import { Head } from "$fresh/runtime.ts";
 import NodeRSA from "https://esm.sh/node-rsa@1.1.1";
 import "$dotenv/load.ts";
 
-const privateKeyPEMString = Deno.readTextFileSync(Deno.env.get("KEY_PATH") as string);
-
-const privateKeyPEM = new NodeRSA(privateKeyPEMString);
+const privateKeyPEMString = Deno.env.get("KEY") as string;
+const privateKeyPEM = new NodeRSA(privateKeyPEMString, "pkcs1-private-pem");
 const privateKeyPkcs8 = privateKeyPEM.exportKey("pkcs8-private-pem");
 
 export default function GeneratePage(props: PageProps) {
