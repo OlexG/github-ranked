@@ -10,7 +10,6 @@ let privateKeyPEMString = Deno.env.get("KEY") as string;
 privateKeyPEMString = privateKeyPEMString.replace(/"/g, "");
 // turn the \n into actual newlines
 privateKeyPEMString = privateKeyPEMString.replace(/\\n/g, "\n");
-console.log(privateKeyPEMString);
 
 const privateKeyPEM = new NodeRSA(privateKeyPEMString, "pkcs1");
 const privateKeyPkcs8 = privateKeyPEM.exportKey("pkcs8-private-pem");
