@@ -11,9 +11,12 @@ export default function Header() {
   }
   return (
     <div className="py-3 px-2 border-b w-screen flex flex-row items-center text-gray-500"> 
-      <button className="text-gray-500 transition duration-200 ease-in-out hover:text-gray-400">
+      <a 
+        className="text-gray-500 transition duration-200 ease-in-out hover:text-gray-400"
+        href="/"
+      >
         <IconHome class="w-8 h-8" />
-      </button>
+      </a>
       <input 
         type="text" 
         placeholder="username" 

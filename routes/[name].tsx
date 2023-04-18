@@ -9,7 +9,7 @@ export default function GeneratePage(props: PageProps) {
   return (
     <>
       <Head>
-        <title>Fresh App</title>
+        <title>Github Ranked</title>
       </Head>
       <Header />
       <Profile 
