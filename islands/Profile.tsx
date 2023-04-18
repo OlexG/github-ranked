@@ -1,15 +1,10 @@
-import { App } from "https://cdn.skypack.dev/@octokit/app";
 import { useEffect, useState } from "preact/hooks";
 import IconStarFilled from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/star-filled.tsx"
 import IconBook2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/book-2.tsx"
 import IconTrophyFilled from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/trophy-filled.tsx"
-import { mergeCommitContributionsWithOthers, sortCommitContributions } from "../utils/parsing.ts"
 
 export default function Profile(props: {
   name: string;
-  privateKeyPkcs8: string;
-  appID: string;
-  installationID: string;
 }) {
   const [ repos, setRepos ] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -21,84 +16,15 @@ export default function Profile(props: {
   });
 
   useEffect(() => {
-    async function getContributions(username: string) {
-      const body = `query { 
-            user(login: "${username}") {
-              email
-              avatarUrl
-              bio
-              contributionsCollection(from: "2023-01-01T00:00:00Z", to: "${new Date().toISOString()}") {
-                commitContributionsByRepository {
-                  repository {
-                    name, 
-                    stargazerCount,
-                    databaseId
-                  },
-                  contributions {
-                    totalCount
-                  }
-                }
-                pullRequestReviewContributionsByRepository {
-                  repository {
-                    name,
-                    stargazerCount,
-                    databaseId
-                  },
-                  contributions {
-                    totalCount
-                  }
-                }
-                issueContributionsByRepository {
-                  repository {
-                    name,
-                    stargazerCount,
-                    databaseId
-                  },
-                  contributions {
-                    totalCount
-                  }
-                }
-                pullRequestContributionsByRepository {
-                  repository {
-                    name,
-                    stargazerCount,
-                    databaseId
-                  },
-                  contributions {
-                    totalCount
-                  }
-                }
-              }
-            }
-            
-          }`
-    
-      const app = new App({
-        appId: props.appID,
-        privateKey: props.privateKeyPkcs8,
-      });
-    
-      const octokit = await app.getInstallationOctokit(props.installationID);
-    
-      try {
-        let res = await octokit.graphql(body);
-        res = mergeCommitContributionsWithOthers(res);
-        res = sortCommitContributions(res);
-        setRepos(res.user.contributionsCollection.commitContributionsByRepository);
-        setUser({
-          username: props.name,
-          email: res.user.email,
-          bio: res.user.bio,
-          avatarUrl: res.user.avatarUrl
-        });
+    setLoading(true);
+    fetch(`/api/data?username=${props.name}`)
+      .then(res => res.json())
+      .then(data => {
+        setRepos(data.repos);
+        setUser(data.user);
         setLoading(false);
-      } catch (e) {
-        console.log(e)
       }
-    }
-    if (props.name) {
-      getContributions(props.name);
-    }
+    );
   }, [props.name]);
   
   return <div>

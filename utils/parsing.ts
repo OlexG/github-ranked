@@ -1,5 +1,4 @@
 export function mergeCommitContributionsWithOthers(res: any) {
-  console.log(res);
   const repositories = res.user.contributionsCollection.commitContributionsByRepository;
   const prRepositories = res.user.contributionsCollection.pullRequestContributionsByRepository;
   const issueRepositories = res.user.contributionsCollection.issueContributionsByRepository;
