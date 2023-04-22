@@ -9,6 +9,17 @@ export default function Header() {
       setUsername("");
     }
   }
+  function processGenerate() {
+    if (username.length > 0) {
+      window.location.href = `/image/${username}`;
+      setUsername("");
+    } else {
+      // get username from url
+      const url = window.location.href;
+      const username = url.split("/").pop();
+      window.location.href = `/image/${username}`;
+    }
+  }
   return (
     <div className="py-3 px-2 border-b w-screen flex flex-row items-center text-gray-500"> 
       <a 
@@ -29,6 +40,12 @@ export default function Header() {
         onClick={processEnter}
       >
         GO
+      </button>
+      <button 
+        className="bg-green-400 text-white rounded p-2 ml-4 font-bold transition duration-200 ease-in-out hover:bg-green-500"
+        onClick={processGenerate}
+      >
+        GENERATE IMAGE
       </button>
     </div>
   );
