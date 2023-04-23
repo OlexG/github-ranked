@@ -47,7 +47,7 @@ export default function Image(props: {
 
   return (
   <>
-    <div className="w-1/2">
+    <div className="w-200">
       <div ref={printRef} className='w-full p-1'>
         <div className="w-full border p-6 rounded shadow">
           <p className="text-lg font-light px-3 flex flex-row items-center gap-2">
