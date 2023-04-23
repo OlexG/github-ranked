@@ -27,7 +27,8 @@ async function getContributions(username: string) {
               repository {
                 name, 
                 stargazerCount,
-                databaseId
+                databaseId,
+                url
               },
               contributions {
                 totalCount
@@ -37,7 +38,8 @@ async function getContributions(username: string) {
               repository {
                 name,
                 stargazerCount,
-                databaseId
+                databaseId,
+                url
               },
               contributions {
                 totalCount
@@ -47,7 +49,8 @@ async function getContributions(username: string) {
               repository {
                 name,
                 stargazerCount,
-                databaseId
+                databaseId,
+                url
               },
               contributions {
                 totalCount
@@ -57,7 +60,8 @@ async function getContributions(username: string) {
               repository {
                 name,
                 stargazerCount,
-                databaseId
+                databaseId,
+                url
               },
               contributions {
                 totalCount

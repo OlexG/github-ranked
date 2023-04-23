@@ -21,9 +21,9 @@ export default function Header() {
     }
   }
   return (
-    <div className="py-3 px-2 border-b w-screen flex flex-row items-center text-gray-500"> 
+    <div className="py-3 px-2 border-b w-screen flex flex-row items-center text-gray-500 flex-wrap"> 
       <a 
-        className="text-gray-500 transition duration-200 ease-in-out hover:text-gray-400"
+        className="text-gray-500 transition duration-200 ease-in-out hover:text-gray-400 pl-2.5 md:pr-0"
         href="/"
       >
         <IconHome class="w-8 h-8" />
@@ -36,13 +36,13 @@ export default function Header() {
         onInput={(e) => setUsername((e.target as HTMLInputElement).value)}
       />
       <button 
-        className="bg-green-400 text-white rounded p-2 ml-4 font-bold transition duration-200 ease-in-out hover:bg-green-500"
+        className="md:w-10 w-full bg-green-400 text-white rounded p-2 mx-4 my-2 md:ml-4 md:mr-0 font-bold transition duration-200 ease-in-out hover:bg-green-500"
         onClick={processEnter}
       >
         GO
       </button>
       <button 
-        className="bg-green-400 text-white rounded p-2 ml-4 font-bold transition duration-200 ease-in-out hover:bg-green-500"
+        className="md:w-40 w-full bg-green-400 text-white rounded p-2 mx-4 my-2 md:ml-4 md:mr-0 font-bold transition duration-200 ease-in-out hover:bg-green-500"
         onClick={processGenerate}
       >
         GENERATE IMAGE

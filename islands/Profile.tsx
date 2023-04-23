@@ -30,9 +30,9 @@ export default function Profile(props: {
 
   return <div>
     <div className="p-4 flex flex-row gap-4 mx-auto justify-center">
-      <div className='w-1/2 p-1'>
+      <div className='md:w-1/2 w-full mx-1 md:mx-0 p-1'>
         <div className="w-full border p-6 rounded shadow">
-          <div className="flex flex-row gap-4">
+          <div className="flex md:flex-row flex-col gap-4">
             {
               loading ? 
                 <div className="animate-pulse w-24 h-24 rounded-full bg-gray-300"></div> 
@@ -75,17 +75,25 @@ export default function Profile(props: {
               <table class="table-auto min-w-full border text-left text-sm font-light">
                 <thead className="bg-gray-100">
                   <tr className="border-b">
-                    <th className="font-bold p-4 text-green-400">Name</th>
-                    <th className="font-bold p-4 border-l text-yellow-400 flex flex-row gap-1 items-center">Stars</th>
-                    <th className="font-bold p-4 border-l text-purple-500">Contributions</th>
+                    <th className="font-bold md:p-4 p-1 text-green-400">Name</th>
+                    <th className="font-bold md:p-4 p-1 border-l text-yellow-400 flex flex-row gap-1 items-center">Stars</th>
+                    <th className="font-bold md:p-4 p-1 border-l text-purple-500">Contributions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {repos.filter((_, i) => i < 10).map((repo: any) => {
                     return <tr className="border-b">
-                      <td className="font-bold p-4 text-green-400"><div className="flex flex-row gap-1 items-center"><IconBook2 class="w-4 h-4" /> {repo.repository.name}</div></td>
-                      <td className="font-bold p-4 border-l text-yellow-400 flex flex-row gap-1 items-center">{repo.repository.stargazerCount} <IconStarFilled class="w-4 h-4" /></td>
-                      <td className="font-bold p-4 border-l text-purple-500"><div className="flex flex-row gap-1 items-center"><IconTrophyFilled class="w-4 h-4" />{repo.contributions.totalCount}</div></td>
+                      <td className="font-bold md:p-4 p-1 text-green-400">
+                        <a 
+                          className="flex flex-row gap-1 items-center hover:text-green-500 cursor-pointer"
+                          href={repo.repository.url} 
+                          target="_blank"
+                        >
+                          <IconBook2 class="w-4 h-4" /> {repo.repository.name}
+                        </a>
+                      </td>
+                      <td className="font-bold md:p-4 p-1 border-l text-yellow-400 flex flex-row gap-1 items-center">{repo.repository.stargazerCount} <IconStarFilled class="w-4 h-4" /></td>
+                      <td className="font-bold md:p-4 p-1 border-l text-purple-500"><div className="flex flex-row gap-1 items-center"><IconTrophyFilled class="w-4 h-4" />{repo.contributions.totalCount}</div></td>
                     </tr>
                   })}
                 </tbody>
