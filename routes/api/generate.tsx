@@ -18,19 +18,20 @@ export const handler: Handlers = {
     }
     const { repos, user } = await getContributions(name);
     const image = await loadImage(user.avatarUrl);
-    const canvas = createCanvas(800, 600);
+    const canvas = createCanvas(800, 200 + Math.min(10, repos.length) * 40);
     const ctx = canvas.getContext("2d");
     // make background white
     ctx.fillStyle = "#fff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    // draw a rectangle with padding and a rounded border
+    
+    /*// draw a rectangle with padding and a rounded border
     ctx.fillStyle = "#fff";
     ctx.strokeStyle = "#ccc";
     ctx.lineWidth = 1;
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
     ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
-    ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+    ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);*/
 
     ctx.fillStyle = "#888";
     // make font Courier New
