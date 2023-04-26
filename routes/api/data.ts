@@ -16,7 +16,7 @@ privateKeyPEMString = privateKeyPEMString.replace(/\\n/g, "\n");
 const privateKeyPEM = new NodeRSA(privateKeyPEMString, "pkcs1");
 const privateKeyPkcs8 = privateKeyPEM.exportKey("pkcs8-private-pem");
 
-async function getContributions(username: string) {
+export async function getContributions(username: string) {
   const body = `query { 
         user(login: "${username}") {
           email

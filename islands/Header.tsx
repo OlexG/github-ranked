@@ -20,6 +20,19 @@ export default function Header() {
       window.location.href = `/image/${username}`;
     }
   }
+
+  function processGetLink() {
+    if (username.length > 0) {
+      // new tab
+      window.open(`/api/generate?name=${username}`);
+    } else {
+      // get username from url
+      const url = window.location.href;
+      const username = url.split("/").pop();
+      window.open(`/api/generate?name=${username}`);
+    }
+  }
+
   return (
     <div className="py-3 px-2 border-b w-screen flex flex-row items-center text-gray-500 flex-wrap"> 
       <a 
@@ -46,6 +59,12 @@ export default function Header() {
         onClick={processGenerate}
       >
         GENERATE IMAGE
+      </button>
+      <button 
+        className="md:w-32 w-full bg-green-400 text-white rounded p-2 mx-4 my-2 md:ml-4 md:mr-0 font-bold transition duration-200 ease-in-out hover:bg-green-500"
+        onClick={processGetLink}
+      >
+        GET LINK
       </button>
     </div>
   );

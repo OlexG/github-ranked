@@ -4,9 +4,10 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name].tsx";
-import * as $1 from "./routes/api/data.tsx";
-import * as $2 from "./routes/image/[name].tsx";
-import * as $3 from "./routes/index.tsx";
+import * as $1 from "./routes/api/data.ts";
+import * as $2 from "./routes/api/generate.tsx";
+import * as $3 from "./routes/image/[name].tsx";
+import * as $4 from "./routes/index.tsx";
 import * as $$0 from "./islands/Header.tsx";
 import * as $$1 from "./islands/Homepage.tsx";
 import * as $$2 from "./islands/Image.tsx";
@@ -15,9 +16,10 @@ import * as $$3 from "./islands/Profile.tsx";
 const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
-    "./routes/api/data.tsx": $1,
-    "./routes/image/[name].tsx": $2,
-    "./routes/index.tsx": $3,
+    "./routes/api/data.ts": $1,
+    "./routes/api/generate.tsx": $2,
+    "./routes/image/[name].tsx": $3,
+    "./routes/index.tsx": $4,
   },
   islands: {
     "./islands/Header.tsx": $$0,
