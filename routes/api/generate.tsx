@@ -137,7 +137,7 @@ export const handler: Handlers = {
     return new Response(returnImage, {
       headers: {
         "content-type": "image/png",
-        "cache-control": `public, max-age=600`,
+        "Cache-Control": `public, max-age=60`,
       },
     });
   }
