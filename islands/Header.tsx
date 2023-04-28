@@ -17,19 +17,9 @@ export default function Header() {
       // get username from url
       const url = window.location.href;
       const username = url.split("/").pop();
-      window.location.href = `/image/${username}`;
-    }
-  }
-
-  function processGetLink() {
-    if (username.length > 0) {
-      // new tab
-      window.open(`/api/generate?name=${username}`);
-    } else {
-      // get username from url
-      const url = window.location.href;
-      const username = url.split("/").pop();
-      window.open(`/api/generate?name=${username}`);
+      if (username && username.length > 0) {
+        window.location.href = `/image/${username}`;
+      }
     }
   }
 
@@ -59,12 +49,6 @@ export default function Header() {
         onClick={processGenerate}
       >
         GENERATE IMAGE
-      </button>
-      <button 
-        className="md:w-32 w-full bg-green-400 text-white rounded p-2 mx-4 my-2 md:ml-4 md:mr-0 font-bold transition duration-200 ease-in-out hover:bg-green-500"
-        onClick={processGetLink}
-      >
-        GET LINK
       </button>
     </div>
   );

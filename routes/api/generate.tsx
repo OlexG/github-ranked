@@ -53,7 +53,7 @@ export const handler: Handlers = {
     const points = repos.reduce((acc: any, curr: any) => {
       return acc + Math.round(((curr as any).contributions.totalCount * (curr as any).repository.stargazerCount) / Math.max(1, (curr as any).repository.pullRequests.totalCount));
     }, 0);
-    ctx.fillText(user.username + '\'s points: ' + points.toString() + ' pts', 40, 65);
+    ctx.fillText(user.username + '\'s stars: ' + points.toString(), 40, 65);
 
     family = 'routes/api/OpenSans-SemiBold.ttf'
     // resolve family to full path
