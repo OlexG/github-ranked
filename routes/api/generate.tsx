@@ -16,7 +16,7 @@ export const handler: Handlers = {
       return new Response("Missing name query parameter", { status: 400 });
     }
     const { repos, user } = await getContributions(name);
-    const canvas = createCanvas(800, 200 + Math.min(10, repos.length) * 40);
+    const canvas = createCanvas(2 * 800, (200 + Math.min(10, repos.length) * 40) * 2);
 
     let family = 'routes/api/OpenSans-Bold.ttf'
     // resolve family to full path
@@ -31,6 +31,7 @@ export const handler: Handlers = {
     })
 
     const ctx = canvas.getContext("2d");
+    ctx.scale(2, 2);
     ctx.font = `24px ${font_identifier}`
     // make background white
     ctx.fillStyle = "#fff";
