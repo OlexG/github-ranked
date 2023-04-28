@@ -28,7 +28,10 @@ export async function getContributions(username: string) {
                 name, 
                 stargazerCount,
                 databaseId,
-                url
+                url,
+                pullRequests {
+                  totalCount
+                }
               },
               contributions {
                 totalCount
@@ -39,7 +42,10 @@ export async function getContributions(username: string) {
                 name,
                 stargazerCount,
                 databaseId,
-                url
+                url,
+                pullRequests {
+                  totalCount
+                }
               },
               contributions {
                 totalCount
@@ -50,7 +56,10 @@ export async function getContributions(username: string) {
                 name,
                 stargazerCount,
                 databaseId,
-                url
+                url,
+                pullRequests {
+                  totalCount
+                }
               },
               contributions {
                 totalCount
@@ -61,7 +70,10 @@ export async function getContributions(username: string) {
                 name,
                 stargazerCount,
                 databaseId,
-                url
+                url,
+                pullRequests {
+                  totalCount
+                }
               },
               contributions {
                 totalCount
@@ -83,6 +95,7 @@ export async function getContributions(username: string) {
     let res = await octokit.graphql(body);
     res = mergeCommitContributionsWithOthers(res);
     res = sortCommitContributions(res);
+    console.log(res.user.contributionsCollection.commitContributionsByRepository);
     return {
       repos: res.user.contributionsCollection.commitContributionsByRepository,
       user: {

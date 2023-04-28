@@ -36,7 +36,7 @@ export function mergeCommitContributionsWithOthers(res: any) {
 
 export function sortCommitContributions(res: any) {
   res.user.contributionsCollection.commitContributionsByRepository.sort((a: any, b: any) => {
-    return (b.contributions.totalCount * b.repository.stargazerCount) - (a.contributions.totalCount * a.repository.stargazerCount);
+    return (b.contributions.totalCount * b.repository.stargazerCount / Math.max(1, b.repository.pullRequests.totalCount)) - (a.contributions.totalCount * a.repository.stargazerCount/ Math.max(1, b.repository.pullRequests.totalCount));
   });
   return res;
 }

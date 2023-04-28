@@ -18,14 +18,14 @@ export const handler: Handlers = {
     const { repos, user } = await getContributions(name);
     const canvas = createCanvas(800, 200 + Math.min(10, repos.length) * 40);
 
-    let family = 'routes/api/OpenSans-SemiBold.ttf'
+    let family = 'routes/api/OpenSans-Light.ttf'
     // resolve family to full path
     //const __dirname = new URL('.', import.meta.url).pathname;
     // family = path.resolve(__dirname, '../../data/static/OpenSans_SemiCondensed-Regular.ttf')
     
     // resolve path
-    const font = await Deno.readFile(family)
-    const font_identifier = new Date().toString()
+    let font = await Deno.readFile(family)
+    let font_identifier = new Date().toString()
     canvas.loadFont(font, {
       family: font_identifier
     })
@@ -45,16 +45,26 @@ export const handler: Handlers = {
     ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
     ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);*/
 
-    ctx.fillStyle = "#888";
+    ctx.fillStyle = "#555";
     // make font Courier New
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     const points = repos.reduce((acc: any, curr: any) => {
-      return acc + ((curr as any).contributions.totalCount * (curr as any).repository.stargazerCount)
+      return acc + Math.round(((curr as any).contributions.totalCount * (curr as any).repository.stargazerCount) / Math.max(1, (curr as any).repository.pullRequests.totalCount));
     }, 0);
     ctx.fillText(user.username + ': ' + points.toString() + ' pts', 40, 70);
 
+    family = 'routes/api/OpenSans-SemiBold.ttf'
+    // resolve family to full path
+    //const __dirname = new URL('.', import.meta.url).pathname;
+    // family = path.resolve(__dirname, '../../data/static/OpenSans_SemiCondensed-Regular.ttf')
     
+    // resolve path
+    font = await Deno.readFile(family)
+    font_identifier = new Date().toString()
+    canvas.loadFont(font, {
+      family: font_identifier
+    })
 
 
     // Styling options
@@ -66,8 +76,8 @@ export const handler: Handlers = {
     const tableHeaderFontSize = 16;
     const tableRowFontSize = 14;
     const tableHeaderColor = "#666";
-    const tableRowColor = "#ccc";
-    const tableHeaderBgColor = "#f2f2f2";
+    const tableRowColor = "#ddd";
+    const tableHeaderBgColor = "#ccc";
     const tableRowBgColor = "#fff";
     const cornerRadius = 10; // Change this to adjust the corner radius
 
@@ -86,7 +96,12 @@ export const handler: Handlers = {
     const numRows = Math.min(10, repos.length);
     for (let i = 0; i < numRows; i++) {
       const repo = repos[i];
-      const rowColor = i % 2 === 0 ? tableRowColor : tableRowBgColor;
+      let rowColor;
+      if ((numRows + 1) % 2 === 0) {
+        rowColor = i % 2 === 0 ? tableRowColor : tableRowBgColor;
+      } else {
+        rowColor = i % 2 === 0 ? tableRowBgColor : tableRowColor;
+      }
       ctx.fillStyle = rowColor;
       if (i === numRows - 1) {
         roundRect(ctx, panelPadding, currentRowY, panelWidth - panelPadding * 2, tableRowFontSize + panelPadding, cornerRadius).fill();

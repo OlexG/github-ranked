@@ -48,7 +48,7 @@ export default function Profile(props: {
                     <span className="">{user.username}:</span>
                     <span className="text-yellow-400 font-bold">{
                       repos.reduce((acc, curr) => {
-                        return acc + ((curr as any).contributions.totalCount * (curr as any).repository.stargazerCount)
+                        return acc + Math.round(((curr as any).contributions.totalCount * (curr as any).repository.stargazerCount) / Math.max(1, (curr as any).repository.pullRequests.totalCount))
                       }, 0)
                     } pts</span>
                   </>
@@ -93,7 +93,7 @@ export default function Profile(props: {
                         </a>
                       </td>
                       <td className="font-bold md:p-4 p-1 border-l text-yellow-400 flex flex-row gap-1 items-center">{repo.repository.stargazerCount} <IconStarFilled class="w-4 h-4" /></td>
-                      <td className="font-bold md:p-4 p-1 border-l text-purple-500"><div className="flex flex-row gap-1 items-center"><IconTrophyFilled class="w-4 h-4" />{repo.contributions.totalCount}</div></td>
+                      <td className="font-bold md:p-4 p-1 border-l text-purple-500"><div className="flex flex-row gap-1 items-center"><IconTrophyFilled class="w-4 h-4" />{Math.round(repo.contributions.totalCount / Math.max(1, repo.repository.pullRequests.totalCount))}</div></td>
                     </tr>
                   })}
                 </tbody>
