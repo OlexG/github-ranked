@@ -18,7 +18,7 @@ export const handler: Handlers = {
     const { repos, user } = await getContributions(name);
     const canvas = createCanvas(800, 200 + Math.min(10, repos.length) * 40);
 
-    let family = 'routes/api/OpenSans-Light.ttf'
+    let family = 'routes/api/OpenSans-Bold.ttf'
     // resolve family to full path
     //const __dirname = new URL('.', import.meta.url).pathname;
     // family = path.resolve(__dirname, '../../data/static/OpenSans_SemiCondensed-Regular.ttf')
@@ -45,14 +45,14 @@ export const handler: Handlers = {
     ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
     ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);*/
 
-    ctx.fillStyle = "#555";
+    ctx.fillStyle = "#3FB883";
     // make font Courier New
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     const points = repos.reduce((acc: any, curr: any) => {
       return acc + Math.round(((curr as any).contributions.totalCount * (curr as any).repository.stargazerCount) / Math.max(1, (curr as any).repository.pullRequests.totalCount));
     }, 0);
-    ctx.fillText(user.username + ': ' + points.toString() + ' pts', 40, 70);
+    ctx.fillText(user.username + '\'s points: ' + points.toString() + ' pts', 40, 65);
 
     family = 'routes/api/OpenSans-SemiBold.ttf'
     // resolve family to full path
@@ -72,12 +72,12 @@ export const handler: Handlers = {
     const panelHeight = 200;
     const panelPadding = 28;
     const panelBgColor = "#f9f9f9";
-    const textColor = "#333";
-    const tableHeaderFontSize = 16;
-    const tableRowFontSize = 14;
-    const tableHeaderColor = "#666";
-    const tableRowColor = "#ddd";
-    const tableHeaderBgColor = "#ccc";
+    const textColor = "#000";
+    const tableHeaderFontSize = 18;
+    const tableRowFontSize = 18;
+    const tableHeaderColor = "#000";
+    const tableRowColor = "#efefef";
+    const tableHeaderBgColor = "#ddd";
     const tableRowBgColor = "#fff";
     const cornerRadius = 10; // Change this to adjust the corner radius
 
@@ -109,10 +109,27 @@ export const handler: Handlers = {
       } else {
         ctx.fillRect(panelPadding, currentRowY, panelWidth - panelPadding * 2, tableRowFontSize + panelPadding);
       }
+      family = 'routes/api/OpenSans-SemiBold.ttf'
+      font = await Deno.readFile(family)
+      font_identifier = new Date().toString()
+      canvas.loadFont(font, {
+        family: font_identifier
+      })
       ctx.fillStyle = textColor;
       ctx.font = `${tableRowFontSize}px ${font_identifier}`;
+      ctx.fillStyle = '#3FB883';
       ctx.fillText(`${i + 1}`, panelPadding * 2, currentRowY + tableRowFontSize + panelPadding/2 - 2.5);
+      ctx.font = `${tableRowFontSize}px ${font_identifier}`;
+      ctx.fillStyle = '#000';
       ctx.fillText(repo.repository.name, panelPadding * 5, currentRowY + tableRowFontSize + panelPadding/2 - 2.5);
+      family = 'routes/api/OpenSans-Bold.ttf'
+      font = await Deno.readFile(family)
+      font_identifier = new Date().toString()
+      canvas.loadFont(font, {
+        family: font_identifier
+      })
+      ctx.font = `${tableRowFontSize}px ${font_identifier}`;
+      ctx.fillStyle = '#3FB883';
       ctx.fillText(repo.repository.stargazerCount.toString(), panelWidth / 2, currentRowY + tableRowFontSize + panelPadding/2 - 2.5);
       ctx.fillText(repo.contributions.totalCount.toString(), panelWidth - panelPadding * 4, currentRowY + tableRowFontSize + panelPadding/2 - 2.5);
       currentRowY += tableRowFontSize + panelPadding;
