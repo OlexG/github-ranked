@@ -34,8 +34,8 @@ export const handler: Handlers = {
     ctx.scale(2, 2);
     ctx.font = `24px ${font_identifier}`
     // make background white
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // ctx.fillStyle = "#fff";
+    // ctx.fillRect(0, 0, canvas.width, canvas.height);
     
     /*// draw a rectangle with padding and a rounded border
     ctx.fillStyle = "#fff";
