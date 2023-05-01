@@ -33,21 +33,8 @@ export const handler: Handlers = {
     const ctx = canvas.getContext("2d");
     ctx.scale(2, 2);
     ctx.font = `24px ${font_identifier}`
-    // make background white
-    // ctx.fillStyle = "#fff";
-    // ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    /*// draw a rectangle with padding and a rounded border
-    ctx.fillStyle = "#fff";
-    ctx.strokeStyle = "#ccc";
-    ctx.lineWidth = 1;
-    ctx.lineJoin = "round";
-    ctx.lineCap = "round";
-    ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
-    ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);*/
 
     ctx.fillStyle = "#3FB883";
-    // make font Courier New
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     const points = repos.reduce((acc: any, curr: any) => {
@@ -56,11 +43,7 @@ export const handler: Handlers = {
     ctx.fillText(user.username + '\'s stars: ' + points.toString(), 40, 65);
 
     family = 'routes/api/OpenSans-SemiBold.ttf'
-    // resolve family to full path
-    //const __dirname = new URL('.', import.meta.url).pathname;
-    // family = path.resolve(__dirname, '../../data/static/OpenSans_SemiCondensed-Regular.ttf')
     
-    // resolve path
     font = await Deno.readFile(family)
     font_identifier = new Date().toString()
     canvas.loadFont(font, {
