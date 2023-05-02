@@ -8,7 +8,7 @@ export default function GeneratePage(props: PageProps) {
   return (
     <>
       <Header />
-      <Image 
+      <Image
         name={name}
       />
     </>

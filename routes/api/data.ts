@@ -1,11 +1,14 @@
 import NodeRSA from "https://esm.sh/node-rsa@1.1.1";
 import { HandlerContext } from "$fresh/server.ts";
 import { App } from "https://cdn.skypack.dev/@octokit/app";
-import { mergeCommitContributionsWithOthers, sortCommitContributions } from "../../utils/parsing.ts"
+import {
+  mergeCommitContributionsWithOthers,
+  sortCommitContributions,
+} from "../../utils/parsing.ts";
 import "$dotenv/load.ts";
 
-const appID=Deno.env.get("APP_ID") as string
-const installationID=Deno.env.get("INSTALLATION_ID") as string
+const appID = Deno.env.get("APP_ID") as string;
+const installationID = Deno.env.get("INSTALLATION_ID") as string;
 
 let privateKeyPEMString = Deno.env.get("KEY") as string;
 // remove the " characters if they are there
@@ -22,7 +25,9 @@ export async function getContributions(username: string) {
           email
           avatarUrl
           bio
-          contributionsCollection(from: "2023-01-01T00:00:00Z", to: "${new Date().toISOString()}") {
+          contributionsCollection(from: "2023-01-01T00:00:00Z", to: "${
+    new Date().toISOString()
+  }") {
             commitContributionsByRepository {
               repository {
                 name, 
@@ -82,7 +87,7 @@ export async function getContributions(username: string) {
           }
         }
         
-      }`
+      }`;
 
   const app = new App({
     appId: appID,
@@ -101,24 +106,27 @@ export async function getContributions(username: string) {
         username: username,
         email: res.user.email,
         bio: res.user.bio,
-        avatarUrl: res.user.avatarUrl
-      }
-    }
+        avatarUrl: res.user.avatarUrl,
+      },
+    };
   } catch (e) {
-    console.log(e)
+    console.log(e);
     return {
       repos: [],
       user: {
         username: username,
         email: "",
         bio: "",
-        avatarUrl: ""
-      }
-    }
+        avatarUrl: "",
+      },
+    };
   }
 }
 
-export const handler = async (_req: Request, _ctx: HandlerContext): Promise<Response> => {
+export const handler = async (
+  _req: Request,
+  _ctx: HandlerContext,
+): Promise<Response> => {
   const url = new URL(_req.url);
   const username = url.searchParams.get("username");
   if (!username) {
