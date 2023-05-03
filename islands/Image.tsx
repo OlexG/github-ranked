@@ -1,8 +1,4 @@
 import { useEffect, useRef, useState } from "preact/hooks";
-import IconStarFilled from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/star-filled.tsx";
-import IconBook2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/book-2.tsx";
-import IconTrophyFilled from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/trophy-filled.tsx";
-import html2canvas from "https://esm.sh/html2canvas@1.4.1";
 
 export default function Image(props: {
   name: string;
@@ -10,9 +6,17 @@ export default function Image(props: {
   const [windowLocation, setWindowLocation] = useState<string | undefined>(
     undefined,
   );
+  const [image, setImage] = useState<string | undefined>(undefined);
   const pRef = useRef<HTMLParagraphElement>(null);
   useEffect(() => {
     setWindowLocation(window.location.origin);
+    async function getImage() {
+      const url = `${window.location.origin}/api/generate?name=${props.name}`;
+      const response = await fetch(url);
+      const blob = await response.blob();
+      setImage(URL.createObjectURL(blob));
+    }
+    getImage();
   }, []);
 
   function copyText() {
@@ -34,10 +38,16 @@ export default function Image(props: {
             <button className="underline text-lg" onClick={() => copyText()}>
               Copy Link
             </button>
-            <img
-              src={`${windowLocation}/api/generate?name=${props.name}`}
-              className="md:w-2/3 w-full"
-            />
+            {image
+              ? (
+                <img
+                  src={image}
+                  className="md:w-2/3 w-full"
+                />
+              )
+              : (
+                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900 mt-16"></div>
+              )}
           </div>
         )}
     </div>
