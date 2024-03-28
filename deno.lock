@@ -1,53 +1,153 @@
 {
-  "version": "2",
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "npm:@heroicons/react": "npm:@heroicons/react@2.0.17",
+      "npm:@heroicons/react@2.0.17": "npm:@heroicons/react@2.0.17",
+      "npm:react-icons@4.8.0": "npm:react-icons@4.8.0"
+    },
+    "npm": {
+      "@heroicons/react@2.0.17": {
+        "integrity": "sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==",
+        "dependencies": {
+          "react": "react@18.2.0"
+        }
+      },
+      "js-tokens@4.0.0": {
+        "integrity": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==",
+        "dependencies": {}
+      },
+      "loose-envify@1.4.0": {
+        "integrity": "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==",
+        "dependencies": {
+          "js-tokens": "js-tokens@4.0.0"
+        }
+      },
+      "react-icons@4.8.0": {
+        "integrity": "sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==",
+        "dependencies": {
+          "react": "react@18.2.0"
+        }
+      },
+      "react@18.2.0": {
+        "integrity": "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==",
+        "dependencies": {
+          "loose-envify": "loose-envify@1.4.0"
+        }
+      }
+    }
+  },
+  "redirects": {
+    "https://cdn.skypack.dev/octokit@3.1.0/app": "https://cdn.skypack.dev/error/build:octokit@v3.1.0-JBmYE9YYdy9iFBCLLgFX",
+    "https://deno.land/x/canvas/mod.ts": "https://deno.land/x/canvas@v1.4.1/mod.ts",
+    "https://esm.sh/v113/@types/node-rsa@~1.1/index.d.ts": "https://esm.sh/v113/@types/node-rsa@1.1.1/index.d.ts"
+  },
   "remote": {
     "https://cdn.jsdelivr.net/npm/node-rsa@1.1.1/src/NodeRSA.min.js": "8b3095f2e8433ba162d6c610f578274c0e373253d1f7155b40ceac1091be9633",
+    "https://cdn.skypack.dev/-/@octokit/app@v12.0.5-6I5SFaGQf2APWWafTzpw/dist=es2019,mode=imports/optimized/@octokit/app.js": "9f773db7f6776959f1a3c9369cdee500bd2d27396bee8f4cbf4e1bf5b210e41d",
     "https://cdn.skypack.dev/-/@octokit/app@v13.1.2-va1QJrygJfTYIsD4QwCC/dist=es2019,mode=imports/optimized/@octokit/app.js": "40ab6ee803a5c9776640762bc5339c14fa9376a3c59a998b4f0866fd03521528",
+    "https://cdn.skypack.dev/-/@octokit/app@v13.1.8-JMYaAacrroneLEGgKdRB/dist=es2019,mode=imports/optimized/@octokit/app.js": "5ab46643c57cc6135dd32b76c843a72c2a51db97461cd2a326d7f23e8d8cd071",
+    "https://cdn.skypack.dev/-/@octokit/auth-app@v3.6.1-Qj713rUEny4T59NCMbcg/dist=es2019,mode=imports/optimized/@octokit/auth-app.js": "54c120c4be9ba809893aef2c1a5ab3832d12a261365ad87a3575b432c1e0f9f8",
+    "https://cdn.skypack.dev/-/@octokit/auth-app@v4.0.13-nuZHmGcU3PMuEZOjXGmk/dist=es2019,mode=imports/optimized/@octokit/auth-app.js": "5eb971ee62cbf12e2ba7f4c721bcc637545abd8ff42db3d61bc38561b010b5a0",
     "https://cdn.skypack.dev/-/@octokit/auth-app@v4.0.8-adFLXWOlWCIfEFr2fSmn/dist=es2019,mode=imports/optimized/@octokit/auth-app.js": "7b2f9fbad7d37d2ffade8e0bdddd95a0daf662bc3e04e30e9d3cf32b7efdb0cf",
     "https://cdn.skypack.dev/-/@octokit/auth-app@v4.0.9-PDf6noFNVAyIxn9z52Rs/dist=es2019,mode=imports/optimized/@octokit/auth-app.js": "38239f9b63911deed00f1c6114bad3f6e6bcdb58ecc5a574543a35a94094efb5",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-app@v4.3.0-a5OSWxsVaDXKL24oEpci/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-app.js": "22076b21515197314d905858bad6de435ceca156498efd09726f5a4adc92419d",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-app@v4.3.0-znA1AZD874pr1f4tYDFX/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-app.js": "967d50b8f70dc6842cf8d6fd9c11fef8d3b16344069a47dd4882cf8c8462b20d",
     "https://cdn.skypack.dev/-/@octokit/auth-oauth-app@v5.0.4-K3MpIsAqbhz2CA30nMiK/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-app.js": "67b06457fccf4a63ff00482b7db85c899edb7d879f87d063d89bcfe7ccf3d7b2",
     "https://cdn.skypack.dev/-/@octokit/auth-oauth-app@v5.0.5-a1SUPmX2LDlXjTAHww1O/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-app.js": "f9076236638ad6a85617ec906e42c73513c097a839f3c2b8016416e4728155c2",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-app@v5.0.6-EbQU4u9fk2Cc2IGzu809/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-app.js": "2d55099d9e0cf8244bacf1d6d777de836eb088fddbec075a74e1ea30e5fc5ea6",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-device@v3.1.2-fomlxQFGQwtgjW3U4T0t/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-device.js": "426ecc65d0f5e7e951131c3ae2ca11bcc1bec6fbf2807add6ebaf5964fdd6e2e",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-device@v3.1.2-jrv3qxpToceTRfj0MmeW/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-device.js": "a7c78837f01a78b1112b6db7116460c7e3c6222a41aa8369730c18ff20b5a862",
     "https://cdn.skypack.dev/-/@octokit/auth-oauth-device@v4.0.3-uQIkIlPtGc5xf168qKnD/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-device.js": "963145722341c398d0bd682b0e012361e4247c6ea961481365cf379309e76e70",
     "https://cdn.skypack.dev/-/@octokit/auth-oauth-device@v4.0.4-hP1UxhJ3gG79bZ6saptb/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-device.js": "ce699533c10b7fb238aef0453ec69c4f1ab500bd9d8fb60cd270b9a0f16159af",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-device@v4.0.5-JoK2VVFOgFSHpenxFSZz/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-device.js": "67de68ca4d26e526c193ea93f212b16fbb96e3a8ff1315daded05dc32327b745",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-user@v1.3.0-3Gk9kIxea3gSMScwV3R0/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-user.js": "70fb48c38bd666997b1d3343c2eb3375d7ad4364e717007ddac48254d72ed2a8",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-user@v1.3.0-GKJ3AMAVWVUjRhMNFqbI/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-user.js": "415affc1c526ded89a82d59c21651b4f24dcb7e20fd4ec6c808d186d225fd647",
     "https://cdn.skypack.dev/-/@octokit/auth-oauth-user@v2.0.4-axpCBcC3ixss7ssDzkv0/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-user.js": "3797bad38f76fec3630a8e816521b7f6814a9b9fbf789f0d28c308351da1e0fc",
     "https://cdn.skypack.dev/-/@octokit/auth-oauth-user@v2.1.1-9iDz48DxUbajmjl1oNL8/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-user.js": "7af34a4f0c4f844b36231c1346a5e2cdf5d23b60d6c9ff9b916c0f0bb3afca3c",
+    "https://cdn.skypack.dev/-/@octokit/auth-oauth-user@v2.1.2-I1QPi4om7R5DXeyJ8kez/dist=es2019,mode=imports/optimized/@octokit/auth-oauth-user.js": "3a01c5b010c9ceed9e43872ce2be5559296afe91121589d1c2a4da2b6e40dad9",
+    "https://cdn.skypack.dev/-/@octokit/auth-token@v2.5.0-Xn3EzRuQ6c0Kw6nojvmS/dist=es2019,mode=imports/optimized/@octokit/auth-token.js": "5247df74f0bd63d994d1ab5b52265761cf2eb1b67f12171a030ebef4027d5eb6",
+    "https://cdn.skypack.dev/-/@octokit/auth-token@v2.5.0-ydPyUxITErBnLwc9uHUy/dist=es2019,mode=imports/optimized/@octokit/auth-token.js": "5247df74f0bd63d994d1ab5b52265761cf2eb1b67f12171a030ebef4027d5eb6",
     "https://cdn.skypack.dev/-/@octokit/auth-token@v3.0.1-ly74qZR7OArBGuuxxQmj/dist=es2019,mode=imports/optimized/@octokit/auth-token.js": "5247df74f0bd63d994d1ab5b52265761cf2eb1b67f12171a030ebef4027d5eb6",
     "https://cdn.skypack.dev/-/@octokit/auth-token@v3.0.2-6StUcbMMryxBbbtdl0g6/dist=es2019,mode=imports/optimized/@octokit/auth-token.js": "5247df74f0bd63d994d1ab5b52265761cf2eb1b67f12171a030ebef4027d5eb6",
+    "https://cdn.skypack.dev/-/@octokit/auth-token@v3.0.4-2MxLVrxpDMHHnMXroWFj/dist=es2019,mode=imports/optimized/@octokit/auth-token.js": "5247df74f0bd63d994d1ab5b52265761cf2eb1b67f12171a030ebef4027d5eb6",
+    "https://cdn.skypack.dev/-/@octokit/auth-unauthenticated@v2.1.0-CPEDoLNtGGiDZlPr1Hpu/dist=es2019,mode=imports/optimized/@octokit/auth-unauthenticated.js": "6137d8bfb4fe4e2e916f657d10e1ce52050df5cd9104a38c119a4586a77edbc9",
+    "https://cdn.skypack.dev/-/@octokit/auth-unauthenticated@v2.1.0-HPsV474lBv0Mhmidmd9D/dist=es2019,mode=imports/optimized/@octokit/auth-unauthenticated.js": "6137d8bfb4fe4e2e916f657d10e1ce52050df5cd9104a38c119a4586a77edbc9",
     "https://cdn.skypack.dev/-/@octokit/auth-unauthenticated@v3.0.3-aETbAsmUKpEnrKvlOKrn/dist=es2019,mode=imports/optimized/@octokit/auth-unauthenticated.js": "6137d8bfb4fe4e2e916f657d10e1ce52050df5cd9104a38c119a4586a77edbc9",
     "https://cdn.skypack.dev/-/@octokit/auth-unauthenticated@v3.0.4-7GhbdeqPII99HJMLpu6P/dist=es2019,mode=imports/optimized/@octokit/auth-unauthenticated.js": "6137d8bfb4fe4e2e916f657d10e1ce52050df5cd9104a38c119a4586a77edbc9",
+    "https://cdn.skypack.dev/-/@octokit/auth-unauthenticated@v3.0.5-W4R0tXBAk2Az1tb4twBK/dist=es2019,mode=imports/optimized/@octokit/auth-unauthenticated.js": "ed60ede202b97e29dc360c2ce5cda0a63201071c1432f76b17467d2c8858feda",
+    "https://cdn.skypack.dev/-/@octokit/core@v3.5.1-ALyFoTSfNZSq5zrkBQoL/dist=es2019,mode=imports/optimized/@octokit/core.js": "a26e461b09b343eadbcd48cd4b2ab38e02c2bd6b7274444420c04ac3a41a29e0",
+    "https://cdn.skypack.dev/-/@octokit/core@v3.5.1-qH7RNM42EzmB6tSfehWb/dist=es2019,mode=imports/optimized/@octokit/core.js": "b78a8a9cf778037d220cc45acce1e48dfb27a3b9a35a8cc5a6f75c7f92b70a34",
     "https://cdn.skypack.dev/-/@octokit/core@v4.1.0-37dPUv7ak0haD8P2SFOh/dist=es2019,mode=imports/optimized/@octokit/core.js": "c7a74b5d6a1dd996e503ca667e51746006e7b7b87449ca0e3a96cf970f795c76",
     "https://cdn.skypack.dev/-/@octokit/core@v4.2.0-o34eNNHbTt3m8fabSUgI/dist=es2019,mode=imports/optimized/@octokit/core.js": "51942f9b2fb6b60a6ad88c3985fe77a313b0b7ada6ea5ddd50478d774f724361",
     "https://cdn.skypack.dev/-/@octokit/core@v4.2.0-o34eNNHbTt3m8fabSUgI/dist=es2019,mode=types/dist-types/index.d.ts": "da400c1e70998eeea082bc2511412bc769c4318b6fd32478443223b491b72922",
     "https://cdn.skypack.dev/-/@octokit/core@v4.2.0-o34eNNHbTt3m8fabSUgI/dist=es2019,mode=types/dist-types/types.d.ts": "9254014e2351b20a4ca1962004a2ce5e349f4870ea4b9a4e453c5e3fcde671a0",
+    "https://cdn.skypack.dev/-/@octokit/core@v4.2.4-Nskw5ctKiAqgB9CbW3Uj/dist=es2019,mode=imports/optimized/@octokit/core.js": "d3d4062a9f67875185d48e2d3b78fedf5599da819ff647265f7244337a637ee2",
+    "https://cdn.skypack.dev/-/@octokit/endpoint@v6.0.12-c9GjPBGS8aK532mTmjWn/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "c446189a38ca8fad5137feec7ec6c16b9964783e8563a007894e459d56844dc9",
+    "https://cdn.skypack.dev/-/@octokit/endpoint@v6.0.12-uRrGy3NGbXOw4pbkNPpd/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "c446189a38ca8fad5137feec7ec6c16b9964783e8563a007894e459d56844dc9",
     "https://cdn.skypack.dev/-/@octokit/endpoint@v7.0.0-BBk8IA1IZH4Up0KLG2rH/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "d5b1a2fa37a596dd6dbe723386702d37f5c3589f8ed9d2ef566c2a7f61f1d18b",
     "https://cdn.skypack.dev/-/@octokit/endpoint@v7.0.1-G7HZjabr8F8y2A0T4Riu/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "8e48811ec3048329b3c4048acbf4d691b7674e0416a837ff85623682e56843ac",
     "https://cdn.skypack.dev/-/@octokit/endpoint@v7.0.3-qAKvgTmZVvPvlZmtx3DJ/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "53598eeb2952f4b1b728d6229684f298ea97f615a02de9611045e5dcd8a013d6",
     "https://cdn.skypack.dev/-/@octokit/endpoint@v7.0.4-UaaYRdVGwF6K84LuL551/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "a89f4306ca58f70c23a0118865a7659775f5c9d6ea0b0813c8482f2649aa3a0c",
+    "https://cdn.skypack.dev/-/@octokit/endpoint@v7.0.5-0FCxvxI7MsxMx2BJwZHo/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "60d4bbabf8b132d349f21e4a339cde619eb6b3712a9e154e701997dd1db9e6c0",
+    "https://cdn.skypack.dev/-/@octokit/endpoint@v7.0.6-Vb5FcyfvWo1PqmepBs8W/dist=es2019,mode=imports/optimized/@octokit/endpoint.js": "46bad0afca2ffdf14675b0c2db4340bac6b5e3555c49953a1ec6860f75644ec4",
+    "https://cdn.skypack.dev/-/@octokit/graphql@v4.8.0-EU2xNylg8ZvnTsM326d8/dist=es2019,mode=imports/optimized/@octokit/graphql.js": "ae756422cd9b0d440c0a1210edf7545bdadd25ef7146f7402581f2645e5ce6a7",
+    "https://cdn.skypack.dev/-/@octokit/graphql@v4.8.0-YFyrPUDkzKpEZRKMqKV6/dist=es2019,mode=imports/optimized/@octokit/graphql.js": "c9fe35632845c0426fcf6fb06cf5f2a511d30b5d8b7a9c373c3470312927b7c3",
     "https://cdn.skypack.dev/-/@octokit/graphql@v5.0.1-tFqFBBjqovMhaeUYxj1b/dist=es2019,mode=imports/optimized/@octokit/graphql.js": "feffef10dca0768b5bccbf79776665b84b310d5990cf25740645a3ac27b257f8",
     "https://cdn.skypack.dev/-/@octokit/graphql@v5.0.5-6aggIc6UFzk0RTCBmJPv/dist=es2019,mode=imports/optimized/@octokit/graphql.js": "de060f19e042544ba5b61b7cb977d4ab18e6436cfafb4ac03ecefe3511dcde2b",
     "https://cdn.skypack.dev/-/@octokit/graphql@v5.0.5-6aggIc6UFzk0RTCBmJPv/dist=es2019,mode=types/dist-types/error.d.ts": "f6985668c3886383bf21ad607beecda7e56d555cbd4a8cbaef878249ceb37df5",
     "https://cdn.skypack.dev/-/@octokit/graphql@v5.0.5-6aggIc6UFzk0RTCBmJPv/dist=es2019,mode=types/dist-types/index.d.ts": "1bb85bd0ebefc42f0686321a4bdef2ee698b9e14144177102cf2d04ed11ebb32",
     "https://cdn.skypack.dev/-/@octokit/graphql@v5.0.5-6aggIc6UFzk0RTCBmJPv/dist=es2019,mode=types/dist-types/types.d.ts": "af728fc71268565b01666fcc565c809e26eb9a2260025a89be77ad6dfd14489c",
+    "https://cdn.skypack.dev/-/@octokit/graphql@v5.0.6-3kIUhFy7n4ERmQcc02YA/dist=es2019,mode=imports/optimized/@octokit/graphql.js": "8f5d6053eb6d00892fdee4bade7538def2055639800dfb40348c6fac66c509cd",
+    "https://cdn.skypack.dev/-/@octokit/oauth-app@v3.6.0-ZkvSUss803B9yJ25ReA6/dist=es2019,mode=imports/optimized/@octokit/oauth-app.js": "a6e6fe478100a1a9bdfb890c81609f45f49b063d0b89cce78a23a1e4a3835c1e",
     "https://cdn.skypack.dev/-/@octokit/oauth-app@v4.2.0-nAnqVJOuhkINHvbqe87c/dist=es2019,mode=imports/optimized/@octokit/oauth-app.js": "79207500517830ede8d83ed9ef52d817ef123a182e4e67973d855b2ce7edf348",
+    "https://cdn.skypack.dev/-/@octokit/oauth-app@v4.2.4-No0TJc2dz69BDjPU39hX/dist=es2019,mode=imports/optimized/@octokit/oauth-app.js": "73384724bee5d7dc6bbd9783c50d7122274e41c39bbc697de0e3d995c7f894ab",
+    "https://cdn.skypack.dev/-/@octokit/oauth-authorization-url@v4.3.3-Mh9tTwk7N9mGr7h7C47T/dist=es2019,mode=imports/optimized/@octokit/oauth-authorization-url.js": "3f5f32b65697d43eb0bea5ed84abacb86b7e197d779982eb897ee5e520c4f6bb",
     "https://cdn.skypack.dev/-/@octokit/oauth-authorization-url@v5.0.0-5uWV8VYCvdtPxRacE2TN/dist=es2019,mode=imports/optimized/@octokit/oauth-authorization-url.js": "3f5f32b65697d43eb0bea5ed84abacb86b7e197d779982eb897ee5e520c4f6bb",
+    "https://cdn.skypack.dev/-/@octokit/oauth-methods@v1.2.5-JIJgZmtKAPEN4AtHhpMA/dist=es2019,mode=imports/optimized/@octokit/oauth-methods.js": "79ec2fce98aa3093c9ce8281f6d02a711a460b55dc8dba49985cc728342e96c4",
+    "https://cdn.skypack.dev/-/@octokit/oauth-methods@v1.2.5-cKPdODgiF7k5C82lHbdF/dist=es2019,mode=imports/optimized/@octokit/oauth-methods.js": "4c53d5bb201c9082398fd3dc3fcf9e46dedd0222fad74bcbf7d881fd2fa16d66",
+    "https://cdn.skypack.dev/-/@octokit/oauth-methods@v1.2.6-ENFmCgLJ3nqBWxtKIkAu/dist=es2019,mode=imports/optimized/@octokit/oauth-methods.js": "bb3fdd546e090980829abccc4aecc0badeabfb4f9e9f02d5f43f294c4947892d",
     "https://cdn.skypack.dev/-/@octokit/oauth-methods@v2.0.3-LbPhfbSVgxkk3JgaHmFI/dist=es2019,mode=imports/optimized/@octokit/oauth-methods.js": "bd7a36b9f025e8bb5b0ab40a43b4880d584c9ea931ba09a98d851608298c9a3b",
     "https://cdn.skypack.dev/-/@octokit/oauth-methods@v2.0.4-vN3PXT2WKIoqLNFAYLVz/dist=es2019,mode=imports/optimized/@octokit/oauth-methods.js": "6b014e1d64bc3009cd5ac092cde8b52162ab71bdfb302bc0e90542a135c322b3",
+    "https://cdn.skypack.dev/-/@octokit/oauth-methods@v2.0.6-rqBDZRzJGOC9PNF6sqru/dist=es2019,mode=imports/optimized/@octokit/oauth-methods.js": "4160a5d1a204eca3ca243486d74225eceb01af0807d05dda35651d30c97a1111",
     "https://cdn.skypack.dev/-/@octokit/openapi-types@v14.0.0-KD7Y4fuQRWesAyHKL6PE/dist=es2019,mode=types/types.d.ts": "4885183969bc6e3de0cc1d5e396ae0ccc79cc4b1ff6a43d1dcb9c041ff658ccb",
     "https://cdn.skypack.dev/-/@octokit/openapi-types@v16.0.0-unnyRO3bXt1sQJOUFoNL/dist=es2019,mode=types/types.d.ts": "6babad1050df6dd3ce4caa33c2cb5b0570f3aa74c971997726b0d68a68066f2e",
+    "https://cdn.skypack.dev/-/@octokit/plugin-paginate-graphql@v4.0.0-I9PKwbzjd6SHZpduZ6xv/dist=es2019,mode=imports/optimized/@octokit/plugin-paginate-graphql.js": "462de736e99a43c64578f74e54427fd5f0705e30551f1f18fbc3382b2a794c1b",
+    "https://cdn.skypack.dev/-/@octokit/plugin-paginate-rest@v2.16.9-tXnu06F75LfEMwycJQG7/dist=es2019,mode=imports/optimized/@octokit/plugin-paginate-rest.js": "7ea7f24e451dff9b3c954b7ee382a4d069e20675adad0666886dcfdd4317ab3a",
+    "https://cdn.skypack.dev/-/@octokit/plugin-paginate-rest@v2.17.0-WC4w22sGlThALMk2veqg/dist=es2019,mode=imports/optimized/@octokit/plugin-paginate-rest.js": "d0e79fb5d7a181e16d93bb9171fccf174cd6f487987c814aeb42dd4bb917c462",
     "https://cdn.skypack.dev/-/@octokit/plugin-paginate-rest@v6.0.0-vP2aOxAY5HoSaiwaIiiL/dist=es2019,mode=imports/optimized/@octokit/plugin-paginate-rest.js": "772e8f2935b50f6a893e646a11e894de056effdcdbac7b140d543ab7008edc81",
+    "https://cdn.skypack.dev/-/@octokit/plugin-paginate-rest@v6.1.2-FXfzU5qejkDMnv50wNDS/dist=es2019,mode=imports/optimized/@octokit/plugin-paginate-rest.js": "844501c9f6b33108706b0b52ddabb11c8ea699d2ec778d3f124f96d809d4240d",
+    "https://cdn.skypack.dev/-/@octokit/plugin-paginate-rest@v9.1.4-aNx4leOkgapDKupFh7D6/dist=es2019,mode=imports/optimized/@octokit/plugin-paginate-rest.js": "a0b973608f2161beaa11bc3f53d790ac40b351df990f19884a4473f8c656da81",
     "https://cdn.skypack.dev/-/@octokit/plugin-request-log@v1.0.4-xGy6dIGQ2bc0aPY0M8yh/dist=es2019,mode=imports/optimized/@octokit/plugin-request-log.js": "ff9a9a43567a5144284a4e2867b2e475af99db27196797c32f3cfdd4380a3aa6",
+    "https://cdn.skypack.dev/-/@octokit/plugin-rest-endpoint-methods@v10.1.5-ztzADW49NTT7t1GteuYu/dist=es2019,mode=imports/optimized/@octokit/plugin-rest-endpoint-methods.js": "7162286af9a40822720747cfe924c67c386735ceb03b50d392b1753900f4fc97",
+    "https://cdn.skypack.dev/-/@octokit/plugin-rest-endpoint-methods@v5.11.1-zVviJl2XBRGUlmXpzwdW/dist=es2019,mode=imports/optimized/@octokit/plugin-rest-endpoint-methods.js": "b986e0edf4554ddc581099825cfcc328c63a99c38d9d22aef1e47183a820fb64",
     "https://cdn.skypack.dev/-/@octokit/plugin-rest-endpoint-methods@v7.0.1-dfCGsR6IfccXnfe6hbym/dist=es2019,mode=imports/optimized/@octokit/plugin-rest-endpoint-methods.js": "a8d91a4ef933aed64b667c758abc4f45a2851fab5f00d6c17178e46412271279",
+    "https://cdn.skypack.dev/-/@octokit/plugin-rest-endpoint-methods@v7.2.3-yuboBdMvPaY9bsRPI2cp/dist=es2019,mode=imports/optimized/@octokit/plugin-rest-endpoint-methods.js": "20e60d2a9da45916a694e5a5e97cc27a0a051afa6727cd4df4944e8fde4a9ae7",
+    "https://cdn.skypack.dev/-/@octokit/plugin-retry@v3.0.9-2RM00ykCcKD5YkZJyfHk/dist=es2019,mode=imports/optimized/@octokit/plugin-retry.js": "5caeb62251e52da5ac29992c41279eac002cadde7e6998aef3806cb56df4845d",
+    "https://cdn.skypack.dev/-/@octokit/plugin-retry@v4.1.6-wxMB0kkiRD6v6sH1owdm/dist=es2019,mode=imports/optimized/@octokit/plugin-retry.js": "c5dab3ba4001b581d32cf97954b17846526b89ffe586a93139469925326f8ef3",
+    "https://cdn.skypack.dev/-/@octokit/plugin-retry@v6.0.1-vQlXTadHUp6VwmIacWA3/dist=es2019,mode=imports/optimized/@octokit/plugin-retry.js": "71e02521269294b6a61eeb022fc1176a90950a807b1e608b56c470a8249586d7",
+    "https://cdn.skypack.dev/-/@octokit/plugin-throttling@v5.2.3-IuUyigKUrD9BlE6Pzlyz/dist=es2019,mode=imports/optimized/@octokit/plugin-throttling.js": "b971f6987423f35ae195b99505cde92899bb5ba5982d876065dfdbb0c448f2ee",
+    "https://cdn.skypack.dev/-/@octokit/plugin-throttling@v8.1.2-ZppOGf1PwssPLN7i2i4K/dist=es2019,mode=imports/optimized/@octokit/plugin-throttling.js": "bf2ab5d0a1b9935d46000e7b58b628a36994d35635c3c8e2286299496ce29797",
+    "https://cdn.skypack.dev/-/@octokit/request-error@v2.1.0-GT1FXnEWKqoIEQtdPP4n/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
+    "https://cdn.skypack.dev/-/@octokit/request-error@v2.1.0-eEdMdUdHjpMHPFvA4aCp/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
     "https://cdn.skypack.dev/-/@octokit/request-error@v3.0.0-BcvKKAt0S3LP5SlMLpJZ/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
     "https://cdn.skypack.dev/-/@octokit/request-error@v3.0.1-jQxWMiDE62mP2cyoSEDi/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
     "https://cdn.skypack.dev/-/@octokit/request-error@v3.0.2-JmEYUgONS3hRDLQaCOAP/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
     "https://cdn.skypack.dev/-/@octokit/request-error@v3.0.3-ZZm6tnw1YJ6j1QaxxSlM/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
     "https://cdn.skypack.dev/-/@octokit/request-error@v3.0.3-ZZm6tnw1YJ6j1QaxxSlM/dist=es2019,mode=types/dist-types/index.d.ts": "6cc291b120e0b73d4d1e72932266717c7fbd8fafdc5a5ead9291545c9abf42a0",
     "https://cdn.skypack.dev/-/@octokit/request-error@v3.0.3-ZZm6tnw1YJ6j1QaxxSlM/dist=es2019,mode=types/dist-types/types.d.ts": "d4b6a1f0b428ac38ab410730bb54a9bc5ba882dc0228d35e655c3653fd4b3573",
+    "https://cdn.skypack.dev/-/@octokit/request-error@v4.0.2-lQuWxXs7p8e1Jffh6X2y/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
+    "https://cdn.skypack.dev/-/@octokit/request-error@v5.0.1-k8Taisb8vfEcvQVySk0h/dist=es2019,mode=imports/optimized/@octokit/request-error.js": "72409dbe6dabfeed08701e925eb837aa7965c58cdeed3dcedd345d0037965837",
+    "https://cdn.skypack.dev/-/@octokit/request@v5.6.2-MAuQKzoBVLIGyjcIqJQp/dist=es2019,mode=imports/optimized/@octokit/request.js": "33fa59fbe62b515d9908076fda1d6dfb9976cf6f2db517037c34ee1d11b10e7c",
+    "https://cdn.skypack.dev/-/@octokit/request@v5.6.2-bzvxjBiOcCqnwOFwk49P/dist=es2019,mode=imports/optimized/@octokit/request.js": "2df8cde46a4e7fd964d3b26ebd30908aedfd3fcd6367b4adc48fab0e5d8a0c82",
     "https://cdn.skypack.dev/-/@octokit/request@v6.2.0-q5zDfQxDJi3pZbyD3Pga/dist=es2019,mode=imports/optimized/@octokit/request.js": "353fb43f81e1d47d30cd0ce0f6e3826f3250deba2550375f98d5bd92df48019e",
     "https://cdn.skypack.dev/-/@octokit/request@v6.2.1-nNBYVdjyDnH6n0gpygNS/dist=es2019,mode=imports/optimized/@octokit/request.js": "e8af30d249bd11ae484ae3f1b3581fb819e84abaa5e8ea01fcb6718cd2fd4e5a",
     "https://cdn.skypack.dev/-/@octokit/request@v6.2.2-QeQLqIePxKxHvkZWYfNG/dist=es2019,mode=imports/optimized/@octokit/request.js": "7a99d2059127b16007f77938b3097d079d86d46bf44c03186852818837af3045",
     "https://cdn.skypack.dev/-/@octokit/request@v6.2.2-QeQLqIePxKxHvkZWYfNG/dist=es2019,mode=types/dist-types/index.d.ts": "89c91c7faab3a756c98631b19bb6472a24608da950b3f1f7fb2e1a2aedebc30a",
     "https://cdn.skypack.dev/-/@octokit/request@v6.2.3-1L6dnq0GOgXmG67o2geB/dist=es2019,mode=imports/optimized/@octokit/request.js": "9af37b962671851ef9119e99baa011c8d6edfd5b14e75fb045f3a2a5087c99e2",
+    "https://cdn.skypack.dev/-/@octokit/request@v6.2.5-o0CqRUUhuAMIhc3RBuTe/dist=es2019,mode=imports/optimized/@octokit/request.js": "a4f1c632b4e7ba42e209f1f76de666b281cf74608297846ad103fc686b4600b4",
+    "https://cdn.skypack.dev/-/@octokit/request@v6.2.6-Vj0C4AO9z3iVEk9Eq7XJ/dist=es2019,mode=imports/optimized/@octokit/request.js": "2de162fa5b6516e8b13fabc37ce1197405926e23ab43c258dc4f66cbc3323667",
+    "https://cdn.skypack.dev/-/@octokit/request@v6.2.7-0En1j876gf0FM7d8TgFo/dist=es2019,mode=imports/optimized/@octokit/request.js": "fe76ab0a722dbc5fa0cc7b007f782925b3292d01548971a151217ff04170b001",
     "https://cdn.skypack.dev/-/@octokit/rest@v19.0.7-fuuyWKgN6s3HuZefQFbU/dist=es2019,mode=imports/optimized/@octokit/rest.js": "18bcaf81fc0af2b0663e96669371e0d7d6c3c223e6d5a33e033fff4cce239794",
     "https://cdn.skypack.dev/-/@octokit/types@v8.0.0-2LHKv7LnzBHU2IWrPnnC/dist=es2019,mode=types/dist-types/AuthInterface.d.ts": "8572de0d5253e0f22b693942c425e94324d5a2aede690d1003c799028edf3caa",
     "https://cdn.skypack.dev/-/@octokit/types@v8.0.0-2LHKv7LnzBHU2IWrPnnC/dist=es2019,mode=types/dist-types/EndpointDefaults.d.ts": "8574e3d00f60c5bc2ae903e9404281f4fde55be7ba0cc7d28a25193346ce4de2",
@@ -93,11 +193,16 @@
     "https://cdn.skypack.dev/-/@octokit/types@v9.0.0-QkpI5YAz0eTPVBsCIDRj/dist=es2019,mode=types/dist-types/VERSION.d.ts": "24de9abc33adbb1de5aa3e52107237e79eae6311b6905c0b5230991a65fcd9c2",
     "https://cdn.skypack.dev/-/@octokit/types@v9.0.0-QkpI5YAz0eTPVBsCIDRj/dist=es2019,mode=types/dist-types/generated/Endpoints.d.ts": "849024ce5ecfb1763b41e20d765bd56a11c42dc12a14e50fd8b4a28d0e5f0e12",
     "https://cdn.skypack.dev/-/@octokit/types@v9.0.0-QkpI5YAz0eTPVBsCIDRj/dist=es2019,mode=types/dist-types/index.d.ts": "11b20e22a2ac28f91758c4615719da3200d65868c8c7fd2f83a0506dd03a95f2",
+    "https://cdn.skypack.dev/-/@octokit/webhooks-methods@v2.0.0-9qhlb4ynX0odna3DoADn/dist=es2019,mode=imports/optimized/@octokit/webhooks-methods.js": "1e605a9e4e7bfa6270b319b0ef1c26bb324615f519cbb3eb9c5ec5c38a800147",
     "https://cdn.skypack.dev/-/@octokit/webhooks-methods@v3.0.2-WW8OZiM5j00IznRC87Zr/dist=es2019,mode=imports/optimized/@octokit/webhooks-methods.js": "a93769f443debe70e6900fcd50dede0eaf92c8a3a3cc1a8c709cb23a3f2b9dfe",
     "https://cdn.skypack.dev/-/@octokit/webhooks@v10.7.0-TlqJw3PUjsTK8PiIosS6/dist=es2019,mode=imports/optimized/@octokit/webhooks.js": "149f314a25158e1fd85ea9e56bcb28f24e8a00fee90a08a0899d4277f47cfe27",
+    "https://cdn.skypack.dev/-/@octokit/webhooks@v10.9.1-42nm2VWejvCvsdps6els/dist=es2019,mode=imports/optimized/@octokit/webhooks.js": "9a50370ec7332e617a7782da3bf68ae4e6516c6be9b4bd187efbe5d0e9f6888e",
+    "https://cdn.skypack.dev/-/@octokit/webhooks@v9.18.0-3EeII5aRqkWOHwJXLSn4/dist=es2019,mode=imports/optimized/@octokit/webhooks.js": "404997cb9dd063a279a5bd33f4da0acd6f16274c9f25b836cdee3d071f6bc867",
     "https://cdn.skypack.dev/-/aggregate-error@v3.1.0-SEj1cA2tvXZcRXebUHUI/dist=es2019,mode=imports/optimized/aggregate-error.js": "b45ee295989671717cbab4464be9d23fd49f07c2e581e02982682da15e4892dc",
+    "https://cdn.skypack.dev/-/before-after-hook@v2.2.2-pi5OVaqfPuA5i8u2q0Od/dist=es2019,mode=imports/optimized/before-after-hook.js": "d8dc01095d8c3892f00eafc8a9a6ccdcad3502aa91bbdbcf575916ab203e08f4",
     "https://cdn.skypack.dev/-/before-after-hook@v2.2.3-BExrEObnN5fqJ4Awg6nm/dist=es2019,mode=imports/optimized/before-after-hook.js": "d8dc01095d8c3892f00eafc8a9a6ccdcad3502aa91bbdbcf575916ab203e08f4",
     "https://cdn.skypack.dev/-/before-after-hook@v2.2.3-BExrEObnN5fqJ4Awg6nm/dist=es2019,mode=types/index.d.ts": "0726d18ac9cb69b989c60a9804b7b0f628b5bc95e5e8878a4cc5f5e7dad6ee65",
+    "https://cdn.skypack.dev/-/bottleneck@v2.19.5-WnyfIkTTdKNNPUEySJVJ/dist=es2019,mode=imports/unoptimized/light.js": "8cc75c9dfa1f58a9bd0a17f10d9b97dba8858974a9a6e1e47c20ce437ac72933",
     "https://cdn.skypack.dev/-/btoa-lite@v1.0.0-EdoP2Wejbuei0whftaMM/dist=es2019,mode=imports/optimized/btoa-lite.js": "b35ceac34a43204c2b83ba544ea242bebc74559e2806b428fbf3f1ff01f33c0a",
     "https://cdn.skypack.dev/-/clean-stack@v2.2.0-T6Q1GM86WL6IIYyWyZOC/dist=es2019,mode=imports/optimized/clean-stack.js": "667d9dc9ef257456514af427132e6901b3905018d2820d5afe91bf6cf8f3e25a",
     "https://cdn.skypack.dev/-/deprecation@v2.3.1-uvOjAQiALAZPHmrlznlP/dist=es2019,mode=imports/optimized/deprecation.js": "193048b24ad63bc08fa2acbc65df7b57ddd8421aec8abf378e38e6978b5c0b33",
@@ -107,7 +212,11 @@
     "https://cdn.skypack.dev/-/indent-string@v4.0.0-oHjbEh2BQXR9CwWQa6OC/dist=es2019,mode=imports/optimized/indent-string.js": "dbb1aa469bf28abf32c15fcf349fd974b5cfcea9411869fd0c9cf9c6cdf69e1a",
     "https://cdn.skypack.dev/-/is-plain-object@v5.0.0-8mrVMp9y5RYdpZYGe1Tt/dist=es2019,mode=imports/optimized/is-plain-object.js": "c3fcee678ef371dba4c260b766215ad645777e698f6f857738b6c4b98ad34b93",
     "https://cdn.skypack.dev/-/lru-cache@v6.0.0-IF3dXOIuVvZ6NoDdLuhR/dist=es2019,mode=imports/optimized/lru-cache.js": "9f317410d01919ed5e8979525691dbfffd87ce4e42be8b9c3ed9cd6fbc95236c",
+    "https://cdn.skypack.dev/-/octokit@v1.6.0-ejLekidsObBFlPjWUT01/dist=es2019,mode=imports/optimized/octokit.js": "cb9e20441a387bb1bd05eb55b1aeec33920fbb8c4851425aefbdc5b7ddf889eb",
+    "https://cdn.skypack.dev/-/octokit@v2.1.0-kfh4L1YO64FTOclKOolh/dist=es2019,mode=imports/optimized/octokit.js": "ab96b7e0759917c742e9f6a0ba6f229bd58269dd86894c718352559e29c85e8b",
+    "https://cdn.skypack.dev/-/octokit@v3.1.2-pvl7Jy9C5dsovamrF2M8/dist=es2019,mode=imports/optimized/octokit.js": "1646bd9b65f3357d4db378e05c38aecea89b5c9a996f13121adea7217d1ab5f4",
     "https://cdn.skypack.dev/-/once@v1.4.0-dZva3nt1fLBY6vpXF5Hj/dist=es2019,mode=imports/optimized/once.js": "2ecef4cecb6b0f4aec108af8e23b1d23304494bea8fc569464a6c2a11fda6486",
+    "https://cdn.skypack.dev/-/universal-github-app-jwt@v1.1.0-oLjLtZrd9DYTQuPRHKQC/dist=es2019,mode=imports/optimized/universal-github-app-jwt.js": "367de9cf09ba5aa1a06da34fc6c667e16709a754cd3c72255a4458648359f499",
     "https://cdn.skypack.dev/-/universal-github-app-jwt@v1.1.1-Mt0DtwA6IAv6gPLMtRZr/dist=es2019,mode=imports/optimized/universal-github-app-jwt.js": "367de9cf09ba5aa1a06da34fc6c667e16709a754cd3c72255a4458648359f499",
     "https://cdn.skypack.dev/-/universal-user-agent@v6.0.0-fUAPE3UH5QP7qG0fd0dH/dist=es2019,mode=imports/optimized/universal-user-agent.js": "24df9219684b303ca065c02733e601d11b3ed63a35ec8e473094006d65f6ded9",
     "https://cdn.skypack.dev/-/wrappy@v1.0.2-e8nLh7Qms0NRhbAbUpJP/dist=es2019,mode=imports/optimized/wrappy.js": "01dc1f36207f5400dad37bac2acddb2de0466953f289b8c84b7100e8b160fbb2",
@@ -118,8 +227,19 @@
     "https://cdn.skypack.dev/@octokit/core?dts": "adb410f83b83a65f9e7c41922e6a7e5836a7c8023569f60196ac87e65afe97bb",
     "https://cdn.skypack.dev/@octokit/request": "ee1b3b8e897a5fd1799becb064991e933941cfe5c92d21ff9a24c15845ddfc4a",
     "https://cdn.skypack.dev/@octokit/rest": "05923e982a25e31a63321726c78426e523a8e684cdd932ceb8501d87a1cec562",
+    "https://cdn.skypack.dev/error/build:@octokit/app@v14.0.2-WTZOVdMctpIP9F0ieJ8g?from=octokit": "53e75b4617f9b852aeeb11f11880403c2554677ee6e2df438cb66f8c9f8436ab",
+    "https://cdn.skypack.dev/error/build:@octokit/core@v5.0.0-qb8w1CDc8GFGwpCOchYZ?from=@octokit/plugin-paginate-graphql": "157438dff395b08b103772970a96b89146a6b54161efab4e653a156f9de443eb",
+    "https://cdn.skypack.dev/error/build:@octokit/core@v5.0.1-BvDeUW9BE73CR4xrOB8k?from=@octokit/plugin-retry": "4e4469006a1669c79a77a1c66793a2436bdf690561af5b26661c94af040b6cd6",
+    "https://cdn.skypack.dev/error/build:@octokit/core@v5.0.1-BvDeUW9BE73CR4xrOB8k?from=@octokit/plugin-throttling": "f366b044cedb3b310a0859b94883df80466c45710d5564d777604d5b10f0353c",
+    "https://cdn.skypack.dev/error/build:@octokit/core@v5.0.1-BvDeUW9BE73CR4xrOB8k?from=octokit": "aeb4fa56eed221b4aeb9e0a46194e7ca0418d52b2dcf18a2219cd18e033ae979",
+    "https://cdn.skypack.dev/error/build:@octokit/oauth-app@v6.0.0-AyFk1mE83QkMJr18OH8M?from=octokit": "d90b39f74fab39cbde250a1919c18570e57513f22cb0573ab83a8c3b4ba422c7",
+    "https://cdn.skypack.dev/error/build:lru-cache@v9.1.1-t7cOEoLX2RvAxMKlhTnV?from=@octokit/auth-app": "f50847c21d8bc1057d2af526698cee3c5aaff030778b9c1d7fae97c918b1077b",
+    "https://cdn.skypack.dev/error/build:octokit@v3.1.0-JBmYE9YYdy9iFBCLLgFX": "6575d0bef21ec0cd17f2617d3af4de9c535b7214e752f0db541011c1346282a9",
     "https://cdn.skypack.dev/html-to-image": "f52def8e28c0eeb32ded8619b2d4776908771df15a27996766598dd012179f86",
     "https://cdn.skypack.dev/html2canvas": "e8e4986fe358e8fa2760e587782c0e454d1fb8fae5e7e3022cb536444e039e02",
+    "https://cdn.skypack.dev/octokit@1.6.0": "7992529507da2d5eb9aabb65a4ccdb1e6ad6b1b5f462649cc07fd781bd22e2af",
+    "https://cdn.skypack.dev/octokit@2.1.0": "676e2a81e366cbf35ac1dc664c158850f8ce77d2adcc3d9cb013fe9fda3e9e01",
+    "https://cdn.skypack.dev/octokit@3.1.2": "b9628b0a5d2c52601f34565f0eebab83dff5b712144492cd2c4f131ccd2f2b8e",
     "https://deno.land/std@0.106.0/encoding/base64.ts": "eecae390f1f1d1cae6f6c6d732ede5276bf4b9cd29b1d281678c054dc5cc009e",
     "https://deno.land/std@0.140.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
     "https://deno.land/std@0.140.0/_util/os.ts": "3b4c6e27febd119d36a416d7a97bd3b0251b77c88942c8f16ee5953ea13e2e49",
@@ -953,34 +1073,5 @@
     "https://esm.sh/v99/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2",
     "https://esm.sh/webshot@0.18.0": "b5e0ae618153eecdba0570175f8f3f6220cdc46003a9aaa8c78a759e4fbe6c65",
     "https://raw.githubusercontent.com/hongru/canvas2image/master/canvas2image.js": "70c5e91a088827938651f9c5a122d86d3384fe7b188ae4452e2844dc58de29e4"
-  },
-  "npm": {
-    "specifiers": {
-      "@heroicons/react": "@heroicons/react@2.0.17",
-      "@heroicons/react@2.0.17": "@heroicons/react@2.0.17",
-      "react-icons@4.8.0": "react-icons@4.8.0"
-    },
-    "packages": {
-      "@heroicons/react@2.0.17": {
-        "integrity": "sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==",
-        "dependencies": { "react": "react@18.2.0" }
-      },
-      "js-tokens@4.0.0": {
-        "integrity": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==",
-        "dependencies": {}
-      },
-      "loose-envify@1.4.0": {
-        "integrity": "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==",
-        "dependencies": { "js-tokens": "js-tokens@4.0.0" }
-      },
-      "react-icons@4.8.0": {
-        "integrity": "sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==",
-        "dependencies": { "react": "react@18.2.0" }
-      },
-      "react@18.2.0": {
-        "integrity": "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==",
-        "dependencies": { "loose-envify": "loose-envify@1.4.0" }
-      }
-    }
   }
 }

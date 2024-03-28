@@ -1,6 +1,6 @@
 import NodeRSA from "https://esm.sh/node-rsa@1.1.1";
 import { HandlerContext } from "$fresh/server.ts";
-import { App } from "https://cdn.skypack.dev/@octokit/app";
+import { App } from "https://cdn.skypack.dev/octokit@1.6.0";
 import {
   mergeCommitContributionsWithOthers,
   sortCommitContributions,

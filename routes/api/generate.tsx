@@ -1,12 +1,6 @@
 import { type Handlers } from "$fresh/server.ts";
 import { getContributions } from "./data.ts";
-import { renderToString } from "https://esm.sh/v96/preact-render-to-string@5.2.4/X-ZS8q/src/index";
-import IconStarFilled from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/star-filled.tsx";
-import IconBook2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/book-2.tsx";
-import IconTrophyFilled from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/trophy-filled.tsx";
 import { createCanvas, loadImage } from "https://deno.land/x/canvas/mod.ts";
-import * as path from "https://deno.land/std@0.183.0/path/mod.ts";
-
 export const handler: Handlers = {
   async GET(req: Request) {
     const url = new URL(req.url);
