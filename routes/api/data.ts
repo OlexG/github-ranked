@@ -18,6 +18,8 @@ privateKeyPEMString = privateKeyPEMString.replace(/\\n/g, "\n");
 
 const privateKeyPEM = new NodeRSA(privateKeyPEMString, "pkcs1");
 const privateKeyPkcs8 = privateKeyPEM.exportKey("pkcs8-private-pem");
+const dateOfNowMinusOneYear = new Date();
+dateOfNowMinusOneYear.setFullYear(dateOfNowMinusOneYear.getFullYear() - 1);
 
 export async function getContributions(username: string) {
   const body = `query { 
@@ -25,7 +27,7 @@ export async function getContributions(username: string) {
           email
           avatarUrl
           bio
-          contributionsCollection(from: "2023-01-01T00:00:00Z", to: "${
+          contributionsCollection(from: "${dateOfNowMinusOneYear.toISOString()}", to: "${
     new Date().toISOString()
   }") {
             commitContributionsByRepository {
