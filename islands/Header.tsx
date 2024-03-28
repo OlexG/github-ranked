@@ -29,7 +29,12 @@ export default function Header() {
       }
     }
   }
-  //if (window.location?.href) {
+  if (!window.location?.href) {
+    return <div className="px-2 border-b w-screen flex flex-row items-center text-gray-500 flex-wrap">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-gray-900 my-4 mx-4"></div>
+    </div>
+  }
+
   return (
     <>
         <div className="py-3 px-2 border-b w-screen flex flex-row items-center text-gray-500 flex-wrap">
