@@ -6,8 +6,9 @@ import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/data.ts";
 import * as $2 from "./routes/api/generate.tsx";
-import * as $3 from "./routes/image/[name].tsx";
-import * as $4 from "./routes/index.tsx";
+import * as $3 from "./routes/api/redirect.tsx";
+import * as $4 from "./routes/image/[name].tsx";
+import * as $5 from "./routes/index.tsx";
 import * as $$0 from "./islands/Header.tsx";
 import * as $$1 from "./islands/Homepage.tsx";
 import * as $$2 from "./islands/Image.tsx";
@@ -18,8 +19,9 @@ const manifest = {
     "./routes/[name].tsx": $0,
     "./routes/api/data.ts": $1,
     "./routes/api/generate.tsx": $2,
-    "./routes/image/[name].tsx": $3,
-    "./routes/index.tsx": $4,
+    "./routes/api/redirect.tsx": $3,
+    "./routes/image/[name].tsx": $4,
+    "./routes/index.tsx": $5,
   },
   islands: {
     "./islands/Header.tsx": $$0,

@@ -1,5 +1,11 @@
 import { useState } from "preact/hooks";
 import IconHome from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/home.tsx";
+function redirectToPath(relativePath: string) {
+  if (typeof window !== "undefined") {
+    const newPath = window.location.origin + relativePath;
+    window.location.href = newPath;
+  }
+}
 
 export default function Header() {
   const [username, setUsername] = useState("");
@@ -11,14 +17,15 @@ export default function Header() {
   }
   function processGenerate() {
     if (username.length > 0) {
-      window.location.href = `/image/${username}`;
+      redirectToPath(`/api/redirect?name=${username}`);
       setUsername("");
     } else {
       // get username from url
       const url = window.location.href;
       const username = url.split("/").pop();
       if (username && username.length > 0) {
-        window.location.href = `/image/${username}`;
+        // call the /api/redirect route with the username as a parameter
+        redirectToPath(`/api/redirect?name=${username}`);
       }
     }
   }
