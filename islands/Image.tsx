@@ -26,7 +26,7 @@ export default function Image(props: {
   }
   return (
     <div>
-      {windowLocation && props.name &&
+      {props.name &&
         (
           <div className="flex flex-col items-center justify-center font-light p-5">
             <p ref={pRef}>
